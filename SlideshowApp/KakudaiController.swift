@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KakudaiViewController: UIViewController {
+class KakudaiController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

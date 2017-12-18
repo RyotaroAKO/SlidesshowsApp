@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る" image="Modoru"/>
                                 <connections>
-                                    <action selector="Modoru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hya-9S-fgi"/>
+                                    <action selector="Modoru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FYu-aQ-Azn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QZ-N9-rSP">
@@ -42,12 +42,16 @@
                                 <rect key="frame" x="140" y="490" width="104" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="再生／停止" image="SaiseiTeishi"/>
+                                <connections>
+                                    <action selector="SaiseiTeishi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hei-uU-xnJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="Modoru" destination="QkG-Xq-ELK" id="m9P-Th-7JE"/>
                         <outlet property="View1" destination="L6B-15-0Mf" id="S26-5Q-Gyi"/>
                     </connections>
                 </viewController>
