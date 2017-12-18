@@ -48,8 +48,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="Modoru" destination="QkG-Xq-ELK" id="9Fj-wP-znB"/>
-                        <outlet property="View" destination="L6B-15-0Mf" id="gax-Wg-cSD"/>
                         <outlet property="View1" destination="L6B-15-0Mf" id="S26-5Q-Gyi"/>
                     </connections>
                 </viewController>
