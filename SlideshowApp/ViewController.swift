@@ -96,6 +96,13 @@ class ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のViewController2を取得する
+        let Controller2:ViewController2 = segue.destination as! ViewController2
+        // 遷移先のViewController2で宣言しているKakudaiimageに画像を代入して渡す
+        Controller2.Kakudaiimage = imageArray[CurrentPage]
+    }
+    
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     

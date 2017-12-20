@@ -18,6 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L6B-15-0Mf">
+                                <rect key="frame" x="82" y="101" width="220" height="231"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxP-bv-rTh">
+                                <rect key="frame" x="82" y="101" width="220" height="231"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="E40-fX-TWM" kind="show" id="iyl-7H-MON"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkG-Xq-ELK">
                                 <rect key="frame" x="80" y="352" width="106" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -34,10 +45,6 @@
                                     <action selector="Susumu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oaM-xG-JSj"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L6B-15-0Mf">
-                                <rect key="frame" x="82" y="101" width="220" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlO-Cy-8V6">
                                 <rect key="frame" x="140" y="490" width="104" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -56,37 +63,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69.599999999999994" y="-2.2488755622188905"/>
+            <point key="canvasLocation" x="69.5" y="-2.5"/>
         </scene>
-        <!--Kakudai View Controller-->
-        <scene sceneID="h1B-Gv-W4O">
+        <!--View Controller2-->
+        <scene sceneID="smn-7M-Lwy">
             <objects>
-                <viewController id="TRg-zW-aqk" customClass="KakudaiViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZZ7-pN-IK9">
+                <viewController id="E40-fX-TWM" customClass="ViewController2" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8UI-9G-Oed">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GuP-xB-6Uj">
-                                <rect key="frame" x="0.0" y="37" width="375" height="462"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zyz-4J-k6W">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="432"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9la-dg-gLS">
-                                <rect key="frame" x="141" y="518" width="92" height="67"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qJ-ut-3d5">
+                                <rect key="frame" x="146" y="504" width="82" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="戻る２" image="Modoru2"/>
+                                <state key="normal" title="Button" image="Modoru2"/>
                                 <connections>
-                                    <segue destination="fyk-1l-pOB" kind="unwind" unwindAction="unwind:" id="Icg-QA-ude"/>
+                                    <segue destination="ywh-tN-tr6" kind="unwind" unwindAction="unwind:" id="YUx-Vl-MXr"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="wjr-XV-feh"/>
+                        <viewLayoutGuide key="safeArea" id="Zmd-Qv-AjW"/>
                     </view>
+                    <connections>
+                        <outlet property="View2" destination="zyz-4J-k6W" id="hke-Cb-V1s"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C7M-Ei-Dlg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="fyk-1l-pOB" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JmO-iT-YyA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ywh-tN-tr6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="742" y="-2"/>
+            <point key="canvasLocation" x="762" y="-13"/>
         </scene>
     </scenes>
     <resources>
