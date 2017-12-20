@@ -58,6 +58,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="SaiseiTeishibutton" destination="RlO-Cy-8V6" id="lmX-Z9-Wuc"/>
                         <outlet property="View1" destination="L6B-15-0Mf" id="S26-5Q-Gyi"/>
                     </connections>
                 </viewController>
