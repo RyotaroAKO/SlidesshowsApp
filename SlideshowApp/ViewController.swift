@@ -9,19 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    var CurrentPage = 1
-    // 現在のPage番号　1~3
-    var Status = 1
-    // 現在のコマ送りステータス　1=停止、2＝再生
-    
+
     @IBOutlet weak var View1: UIImageView!
+    
+    var Status = 0
+    // 現在のスライドショーのステータス　0=停止、1＝再生
+    var CurrentPage = 0
+    // 現在のPage番号　0~2
+    var imageArray = [UIImage]()
+    var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        CurrentPage = 1
-        View1.image = #imageLiteral(resourceName: "Image1")
+        
+        let image0: UIImage! = UIImage(named: "Image0")
+        let image1: UIImage! = UIImage(named: "Image1")
+        let image2: UIImage! = UIImage(named: "Image2")
+        
+        imageArray = [image0, image1, image2]
+        
+        View1.image = imageArray[CurrentPage]
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,36 +37,36 @@ class ViewController: UIViewController {
     }
 
     @IBAction func Susumu(_ sender: Any) {
-        // コマ送りスタータスが１停止のみ起動
-        if Status == 1{
+        // ステータスが0停止のみ起動
+        if Status == 0{
             switch CurrentPage {
+            case 0:
+                CurrentPage = 1
+                View1.image = imageArray[CurrentPage]
             case 1:
                 CurrentPage = 2
-                View1.image = #imageLiteral(resourceName: "Image2")
+                View1.image = imageArray[CurrentPage]
             case 2:
-                CurrentPage = 3
-                View1.image = #imageLiteral(resourceName: "Image3")
-            case 3:
-                CurrentPage = 1
-                View1.image = #imageLiteral(resourceName: "Image1")
+                CurrentPage = 0
+                View1.image = imageArray[CurrentPage]
             default:break
             }
         }
     }
     
     @IBAction func Modoru(_ sender: Any) {
-        // コマ送りスタータスが１停止のみ起動
-        if Status == 1{
+        // ステータスが0停止のみ起動
+        if Status == 0{
             switch CurrentPage {
+            case 0:
+                CurrentPage = 2
+                View1.image = imageArray[CurrentPage]
             case 1:
-                CurrentPage = 3
-                View1.image = #imageLiteral(resourceName: "Image3")
+                CurrentPage = 0
+                View1.image = imageArray[CurrentPage]
             case 2:
                 CurrentPage = 1
-                View1.image = #imageLiteral(resourceName: "Image1")
-            case 3:
-                CurrentPage = 2
-                View1.image = #imageLiteral(resourceName: "Image2")
+                View1.image = imageArray[CurrentPage]
             default:break
             }
         }
@@ -67,24 +74,29 @@ class ViewController: UIViewController {
     
     @IBAction func SaiseiTeishi(_ sender: Any) {
         switch Status {
-        case 1:
-            Status = 2
-            // 【1】 画像データをインスタンス化
-            let image1: UIImage! = UIImage(named: "Image1")
-            let image2: UIImage! = UIImage(named: "Image2")
-            let image3: UIImage! = UIImage(named: "Image3")
-            // 【2】 コマ送りに使う画像データの配列をセット
-            View1.animationImages = [image1, image2, image3]
-            // 【3】 コマ送りの間隔を設定
-            View1.animationDuration = 2.0
-            // 【4】 コマ送りのアニメーションを開始
-            View1.startAnimating()
-        case 2:
+        case 0:
             Status = 1
-            // コマ送りのアニメーションを停止
-            View1.stopAnimating()
+            //スライドショー開始。2秒間隔でタイマー起動
+            timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: { (timer) in
+                //タイマー起動ごとに、配列から画像を取り出して、View1に反映していく。ここはif文にしてみた。
+                if(self.CurrentPage > 2){
+                    self.CurrentPage = 0
+                    self.View1.image = self.imageArray[self.CurrentPage]
+                }else{
+                    self.View1.image = self.imageArray[self.CurrentPage]
+                }
+                self.CurrentPage = self.CurrentPage + 1
+            })
+            
+        case 1:
+            Status = 0
+            // スライドショー停止
+            timer.invalidate()
         default:break
         }
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     
 }
