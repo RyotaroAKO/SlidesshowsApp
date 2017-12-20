@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="landscape">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,20 +15,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6B-15-0Mf">
-                                <rect key="frame" x="40" y="20" width="656" height="254"/>
+                                <rect key="frame" x="40" y="40" width="334" height="556"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxP-bv-rTh" userLabel="View1Button">
-                                <rect key="frame" x="40" y="20" width="656" height="254"/>
+                                <rect key="frame" x="40" y="40" width="334" height="556"/>
                                 <connections>
                                     <segue destination="E40-fX-TWM" kind="show" id="iyl-7H-MON"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkG-Xq-ELK">
-                                <rect key="frame" x="40" y="314" width="60" height="60"/>
+                                <rect key="frame" x="40" y="636" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="Bk5-Im-2Kq"/>
                                     <constraint firstAttribute="height" constant="60" id="xom-lw-xli"/>
@@ -38,8 +38,8 @@
                                     <action selector="Modoru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FYu-aQ-Azn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QZ-N9-rSP">
-                                <rect key="frame" x="636" y="314" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QZ-N9-rSP">
+                                <rect key="frame" x="314" y="636" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="Osu-gQ-F59"/>
                                     <constraint firstAttribute="height" constant="60" id="uIJ-uC-Kfy"/>
@@ -50,10 +50,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlO-Cy-8V6" userLabel="SaiseiTeishibutton">
-                                <rect key="frame" x="328" y="294" width="80" height="80"/>
+                                <rect key="frame" x="167" y="616" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="lWd-kw-QOj"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="tI6-I4-Y8R"/>
                                     <constraint firstAttribute="height" constant="80" id="yQu-pR-sG3"/>
                                     <constraint firstAttribute="width" constant="80" id="zIO-5W-faC"/>
                                 </constraints>
@@ -97,21 +95,21 @@
             <objects>
                 <viewController id="E40-fX-TWM" customClass="ViewController2" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8UI-9G-Oed">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zyz-4J-k6W">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="254"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="596"/>
                             </imageView>
-                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qJ-ut-3d5">
-                                <rect key="frame" x="328" y="294" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qJ-ut-3d5">
+                                <rect key="frame" x="177" y="636" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="96A-vU-Rhy"/>
-                                    <constraint firstAttribute="height" constant="80" id="kzw-as-S43"/>
+                                    <constraint firstAttribute="width" constant="60" id="96A-vU-Rhy"/>
+                                    <constraint firstAttribute="height" constant="60" id="kzw-as-S43"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="Modoru2"/>
                                 <connections>
-                                    <segue destination="ywh-tN-tr6" kind="unwind" unwindAction="unwind:" id="YUx-Vl-MXr"/>
+                                    <segue destination="ywh-tN-tr6" kind="unwind" unwindAction="unwind:" id="ofQ-N8-Xms"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -133,7 +131,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JmO-iT-YyA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ywh-tN-tr6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="760.79999999999995" y="-13.043478260869566"/>
+            <point key="canvasLocation" x="759" y="-3"/>
         </scene>
     </scenes>
     <resources>
